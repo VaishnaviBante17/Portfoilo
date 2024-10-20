@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vaishnavi Bante | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f7ebe8, #f1f3f5);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #3a3a3a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #e91e63;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #home {
+            background: linear-gradient(135deg, #f8d7da, #ffe5d1);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .intro h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        .intro p {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .intro .btn {
+            padding: 15px 35px;
+            background: #e91e63;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .intro .btn:hover {
+            background: #d81b60;
+            transform: translateY(-3px);
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 5px;
+            background: #e91e63;
+            margin: 10px auto 0;
+            border-radius: 5px;
+        }
+
+        .about-content {
+            font-size: 20px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .about-content h3 {
+            margin-top: 40px;
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            color: #333;
+        }
+
+        .education-table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-table th, .education-table td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .education-table th {
+            background: #f1f1f1;
+            color: #333;
+        }
+
+        .skill-grid, .project-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .skill-item, .project-item {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 220px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-item:hover, .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: #3a3a3a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .contact-links a.email { background-color: #e91e63; }
+        .contact-links a.linkedin { background-color: #0077b5; }
+        .contact-links a.github { background-color: #333; }
+
+        .contact-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .skill-grid, .project-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="intro">
+            <h1>Hi, I'm Vaishnavi Bante</h1>
+            <p>A Passionate Web Developer</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>I'm currently pursuing a Bachelor of Science in Geology in my first semester, exploring the fascinating world of Earth’s structures, minerals, and natural processes. Alongside my academic journey, I am a passionate web developer, crafting user-friendly websites with a strong focus on modern design and seamless functionality. I enjoy combining analytical thinking from geology with my creativity in web development to solve problems and build innovative digital solutions.</p>
+
+            <h3>Education</h3>
+            <table class="education-table">
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Institution</th>
+                        <th>Year of Completion</th>
+                        <th>Marks (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10th Grade</td>
+                        <td>Kendriya Vidyalaya Ambajhari</td>
+                        <td>2022</td>
+                        <td>75%</td>
+                    </tr>
+                    <tr>
+                        <td>12th Grade</td>
+                        <td>Kendriya Vidyalaya Ambajhari</td>
+                        <td>2024</td>
+                        <td>76%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>My Skills</h2>
+        <div class="skill-grid">
+            <div class="skill-item">HTML</div>
+            <div class="skill-item">CSS</div>
+            <div class="skill-item">Communication</div>
+            <div class="skill-item">Teamwork</div>
+            <div class="skill-item">Adaptability</div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <div class="contact-links">
+            <a href="mailto:vaishnvibante@gmail.com" class="email">Email:vaishnvibante@gmail.com </a>
+            <a href="https://www.linkedin.com/in/vaishnavi-bante-37ab52322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="linkedin">LinkedIn</a>
+            <a href="https://github.com/VaishnaviBante17" target="_blank" class="github">GitHub</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 VaishnaviBante17. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
